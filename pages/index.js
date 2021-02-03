@@ -19,9 +19,6 @@ export default function Home({ allPostsData }) {
         <Link href="mypage" as={`/mypage`}>
           <a>mypage</a>
         </Link>
-        <br />
-          I’ll be building a site like this on{' '}
-        <a href="https://nextjs.org/learn"> Next.js tutorial</a>.
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
