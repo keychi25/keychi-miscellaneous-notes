@@ -19,7 +19,7 @@ import {
   Container,
 } from '@material-ui/core'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 275,
   },
@@ -32,7 +32,10 @@ const useStyles = makeStyles({
     marginBottom: 12,
     fontSize: 25,
   },
-})
+  card: {
+    marginTop: theme.spacing(2),
+  },
+}))
 
 export default function Home({ allPostsData }) {
   const classes = useStyles()
@@ -48,7 +51,7 @@ export default function Home({ allPostsData }) {
             <Container fixed>
               <h2 className={utilStyles.headingLg}>Posts</h2>
               {allPostsData.map(({ id, date, title, tags }) => (
-                <Card className={classes.root}>
+                <Card className={classes.card}>
                   <CardContent>
                     <Typography className={classes.title} color="textSecondary">
                       {title}

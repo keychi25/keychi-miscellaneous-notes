@@ -13,7 +13,6 @@ import {
   MenuItem,
   ListItemIcon,
   BottomNavigation,
-  BottomNavigationAction,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import GitHubIcon from '@material-ui/icons/GitHub'
