@@ -53,7 +53,7 @@ export default function Home({ allPostsData }) {
           >
             <Container fixed>
               <h2 className={utilStyles.headingLg}>Posts</h2>
-              {allPostsData.map(({ id, date, title }) => (
+              {allPostsData.map(({ id, date, title, tags }) => (
                 <Card className={classes.root}>
                   <CardContent>
                     <Typography className={classes.title} color="textSecondary">
@@ -61,6 +61,9 @@ export default function Home({ allPostsData }) {
                     </Typography>
                     <Typography variant="body2" component="p">
                       <Date dateString={date} />
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      カテゴリ：{tags}
                     </Typography>
                   </CardContent>
                   <CardActions>

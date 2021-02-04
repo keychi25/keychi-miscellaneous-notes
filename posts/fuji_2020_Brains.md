@@ -1,6 +1,7 @@
 ---
 title: '富士フィルムコンペ：第4回に参加してみて'
 date: '2020-09-01'
+tags: 'ml'
 ---
 
 富士フイルムが主催しているデータ分析コンペ：[Brain(s)](http://fujifilmdatasciencechallnge.mystrikingly.com/)の参加記録です．

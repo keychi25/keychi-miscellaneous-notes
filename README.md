@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# keychi-miscellaneous-notes
+
+Next で作った自分自身のブログ（雑記）
