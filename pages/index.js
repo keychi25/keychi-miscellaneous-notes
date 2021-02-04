@@ -42,15 +42,9 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <img src="/images/header.jpg" className={utilStyles.headerImg} />
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section>
         <Grid container>
-          <Grid
-            item
-            xs={12}
-            sm={8}
-            className={utilStyles.container}
-            zeroMinWidth
-          >
+          <Grid item xs={12} sm={8} zeroMinWidth>
             <Container fixed>
               <h2 className={utilStyles.headingLg}>Posts</h2>
               {allPostsData.map(({ id, date, title, tags }) => (
@@ -75,14 +69,17 @@ export default function Home({ allPostsData }) {
               ))}
             </Container>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={4}
-            className={utilStyles.container}
-            zeroMinWidth
-          >
-            <Container fixed />
+          <Grid item xs={12} sm={3} zeroMinWidth>
+            <Container fixed>
+              <h2 className={utilStyles.headingLg}>作ったやつ</h2>
+              <Card>
+                <CardContent>
+                  <Typography className={classes.title} color="textSecondary">
+                    title
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Container>
           </Grid>
         </Grid>
       </section>
