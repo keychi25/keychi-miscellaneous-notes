@@ -15,9 +15,10 @@ import {
   BottomNavigation,
   BottomNavigationAction,
 } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/menu'
+import MenuIcon from '@material-ui/icons/Menu'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
+
 export const siteTitle = 'Keychiの雑記'
 
 const useStyles = makeStyles((theme) => ({
@@ -142,7 +143,7 @@ export default function Layout({ children, home }) {
           </div>
         )}
       </div>
-      <BottomNavigation className={classes.stickToBottom}s>
+      <BottomNavigation className={classes.stickToBottom} s>
         <Typography className={classes.footerTitle}>
           &copy;{siteTitle}
         </Typography>
