@@ -14,9 +14,11 @@ import {
   ListItemIcon,
   BottomNavigation,
 } from '@material-ui/core'
+
 import MenuIcon from '@material-ui/icons/Menu'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
+import BorderColorIcon from '@material-ui/icons/BorderColor'
 
 export const siteTitle = 'Keychiの雑記'
 
@@ -40,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     position: 'fixed',
     bottom: 0,
+  },
+  drawerPaper: {
+    width: '200px',
   },
 }))
 
@@ -84,6 +89,18 @@ export default function Layout({ children, home }) {
             <Typography variant="inherit">Twitter</Typography>
           </a>
         </MenuItem>
+        <MenuItem>
+          <ListItemIcon>
+            <BorderColorIcon fontSize="small" />
+          </ListItemIcon>
+          <a
+            href="https://mystudy-client-git-master.keychi25.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Typography variant="inherit">My Study</Typography>
+          </a>
+        </MenuItem>
       </MenuList>
     </div>
   )
@@ -118,7 +135,13 @@ export default function Layout({ children, home }) {
           >
             <MenuIcon />
           </IconButton>
-          <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+          <Drawer
+            open={state.left}
+            onClose={toggleDrawer('left', false)}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
             <div
               tabIndex={0}
               role="button"
