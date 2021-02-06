@@ -54,7 +54,9 @@ export default function Home({ allPostsData }) {
                 <Card className={classes.card}>
                   <CardContent>
                     <Typography className={classes.title} color="textSecondary">
-                      {title}
+                      <Link href="/posts/[id]" as={`/posts/${id}`}>
+                        {title}
+                      </Link>
                     </Typography>
                     <Typography variant="body2" component="p">
                       <Date dateString={date} />

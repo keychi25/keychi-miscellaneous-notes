@@ -1,3 +1,3 @@
-# keychi-miscellaneous-notes
+# miscellaneous-notes
 
 Next で作った自分自身のブログ（雑記）
