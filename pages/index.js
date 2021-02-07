@@ -1,12 +1,13 @@
 import Head from 'next/head'
 
 import { getSortedPostsData } from '../lib/posts'
-
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 
 import Link from 'next/link'
 import Date from '../components/date'
+import Tags from '../components/tags'
+import SingleLineGridList from '../components/gridList'
 
 import { makeStyles } from '@material-ui/core/styles'
 import {
@@ -44,7 +45,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <img src="/images/header.jpg" className={utilStyles.headerImg} />
+      <img src="/images/header.jpg" className={utilStyles.headerImg} key="1" />
       <section>
         <Grid container>
           <Grid item xs={12} sm={8} zeroMinWidth>
@@ -59,8 +60,8 @@ export default function Home({ allPostsData }) {
                     <Typography variant="body2" component="p">
                       <Date dateString={date} />
                     </Typography>
-                    <Typography variant="body2" component="p">
-                      カテゴリ：{tags}
+                    <Typography variant="body2">
+                      <Tags tags={tags} />
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -84,6 +85,19 @@ export default function Home({ allPostsData }) {
               </Card>
             </Container>
           </Grid>
+        </Grid>
+      </section>
+      <section>
+        <Grid item xs={12} sm={8}>
+          <Container fixed>
+            <h2 className={utilStyles.headingLg}>Coffee</h2>
+          </Container>
+        </Grid>
+
+        <Grid item xs={12} sm={12}>
+          <Container fixed>
+            <SingleLineGridList />
+          </Container>
         </Grid>
       </section>
     </Layout>

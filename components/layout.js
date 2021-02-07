@@ -13,7 +13,6 @@ import {
   MenuItem,
   ListItemIcon,
   BottomNavigation,
-  BottomNavigationAction,
 } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
@@ -41,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   stickToBottom: {
     width: '100%',
-    position: 'fixed',
+    position: 'static',
     bottom: 0,
   },
   drawerPaper: {
