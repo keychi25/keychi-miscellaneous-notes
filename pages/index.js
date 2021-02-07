@@ -51,12 +51,10 @@ export default function Home({ allPostsData }) {
             <Container fixed>
               <h2 className={utilStyles.headingLg}>Posts</h2>
               {allPostsData.map(({ id, date, title, tags }) => (
-                <Card className={classes.card}>
+                <Card className={classes.card} key={id}>
                   <CardContent>
                     <Typography className={classes.title} color="textSecondary">
-                      <Link href="/posts/[id]" as={`/posts/${id}`}>
-                        {title}
-                      </Link>
+                      {title}
                     </Typography>
                     <Typography variant="body2" component="p">
                       <Date dateString={date} />
@@ -74,10 +72,10 @@ export default function Home({ allPostsData }) {
               ))}
             </Container>
           </Grid>
-          <Grid item xs={12} sm={3} zeroMinWidth>
+          <Grid item xs={12} sm={4} zeroMinWidth>
             <Container fixed>
               <h2 className={utilStyles.headingLg}>作ったやつ</h2>
-              <Card>
+              <Card className={classes.card}>
                 <CardContent>
                   <Typography className={classes.title} color="textSecondary">
                     title

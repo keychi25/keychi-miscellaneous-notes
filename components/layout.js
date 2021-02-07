@@ -13,6 +13,7 @@ import {
   MenuItem,
   ListItemIcon,
   BottomNavigation,
+  BottomNavigationAction,
 } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
@@ -20,7 +21,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import BorderColorIcon from '@material-ui/icons/BorderColor'
 
-export const siteTitle = 'Keychiの雑記'
+export const siteTitle = 'Keychi & Co'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,13 +30,13 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
+  thisTitle: {
     flexGrow: 1,
     textAlign: 'center',
   },
   footerTitle: {
     flexGrow: 1,
-    textAlign: 'reft',
+    textAlign: 'left',
     marginLeft: theme.spacing(2),
   },
   stickToBottom: {
@@ -123,9 +124,7 @@ export default function Layout({ children, home }) {
       </Head>
       <AppBar position="static" color="inherit">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            {siteTitle}
-          </Typography>
+          <Typography className={classes.thisTitle}>{siteTitle}</Typography>
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -165,7 +164,7 @@ export default function Layout({ children, home }) {
           </div>
         )}
       </div>
-      <BottomNavigation className={classes.stickToBottom} s>
+      <BottomNavigation className={classes.stickToBottom}>
         <Typography className={classes.footerTitle}>
           &copy;{siteTitle}
         </Typography>
