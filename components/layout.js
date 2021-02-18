@@ -94,7 +94,7 @@ export default function Layout({ children, home }) {
             <BorderColorIcon fontSize="small" />
           </ListItemIcon>
           <a
-            href="https://mystudy-client-git-master.keychi25.vercel.app/"
+            href="https://mystudy-client.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
