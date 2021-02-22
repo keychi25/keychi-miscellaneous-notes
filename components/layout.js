@@ -20,7 +20,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import BorderColorIcon from '@material-ui/icons/BorderColor'
 
-export const siteTitle = 'Keychi & Co'
+export const siteTitle = 'Keychi-Notes'
 
 const useStyles = makeStyles((theme) => ({
   root: {
