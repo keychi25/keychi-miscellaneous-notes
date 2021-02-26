@@ -232,7 +232,7 @@ pymongo==3.11.0
 pytest==6.1.0
 python-dateutil==2.8.1
 setuptools==49.2.0
-uvicorn==0.11.8
+uvicorn==0.11
 ```
 
 必要なパッケージを記述します．
