@@ -26,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  wrraper: {
+    minHeight: '100vh',
+    paddingBottom: '60px',
+    position: 'relative',
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -40,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   stickToBottom: {
     width: '100%',
-    position: 'static',
+    position: 'absolute',
     bottom: 0,
   },
   drawerPaper: {
@@ -121,53 +126,55 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <AppBar position="static" color="inherit">
-        <Toolbar>
-          <Typography className={classes.thisTitle}>{siteTitle}</Typography>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-            onClick={toggleDrawer('left', true)}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Drawer
-            open={state.left}
-            onClose={toggleDrawer('left', false)}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-          >
-            <div
-              tabIndex={0}
-              role="button"
-              onClick={toggleDrawer('left', false)}
-              onKeyDown={toggleDrawer('left', false)}
+      <div className={classes.wrraper}>
+        <AppBar position="static" color="inherit">
+          <Toolbar>
+            <Typography className={classes.thisTitle}>{siteTitle}</Typography>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer('left', true)}
             >
-              {sideList}
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              open={state.left}
+              onClose={toggleDrawer('left', false)}
+              classes={{
+                paper: classes.drawerPaper,
+              }}
+            >
+              <div
+                tabIndex={0}
+                role="button"
+                onClick={toggleDrawer('left', false)}
+                onKeyDown={toggleDrawer('left', false)}
+              >
+                {sideList}
+              </div>
+            </Drawer>
+          </Toolbar>
+        </AppBar>
+        <div>
+          <main>{children}</main>
+          {!home && (
+            <div className={styles.container}>
+              <div className={styles.backToHome}>
+                <Link href="/">
+                  <a>← Back to home</a>
+                </Link>
+              </div>
             </div>
-          </Drawer>
-        </Toolbar>
-      </AppBar>
-      <div>
-        <main>{children}</main>
-        {!home && (
-          <div className={styles.container}>
-            <div className={styles.backToHome}>
-              <Link href="/">
-                <a>← Back to home</a>
-              </Link>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
+        <BottomNavigation className={classes.stickToBottom}>
+          <Typography className={classes.footerTitle}>
+            &copy; {new Date().getFullYear()} {siteTitle}
+          </Typography>
+        </BottomNavigation>
       </div>
-      <BottomNavigation className={classes.stickToBottom}>
-        <Typography className={classes.footerTitle}>
-          &copy;{siteTitle}
-        </Typography>
-      </BottomNavigation>
     </>
   )
 }
