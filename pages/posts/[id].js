@@ -12,7 +12,7 @@ import styles from '../../components/layout.module.css'
 
 export default function Post({ postData }) {
   useEffect(() => {
-    hljs.initHighlighting()
+    hljs.highlightAll()
   })
   return (
     <Layout>
