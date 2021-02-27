@@ -17,7 +17,7 @@ conda での仮想環境を構築する際に，その環境をまた再構築�
 
 以下のコマンドを実行する．
 
-```
+```console
 $ conda create -n [仮想環境名] python=[pythonのversion]
 $ # conda create -n test_p36 python=3.6
 ```
@@ -28,7 +28,7 @@ $ # conda create -n test_p36 python=3.6
 
 以下のコマンドを実行する．
 
-```
+```console
 $ conda env export -n [環境変数名] > [保存するファイル名].yml
 $ # conda env export -n test_p36 > test_p36.yml
 ```
@@ -37,7 +37,7 @@ $ # conda env export -n test_p36 > test_p36.yml
 
 以下のコマンドを実行する．
 
-```
+```console
 $ conda env create -f [仮想環境をexportしたymlファイル]
 $ # conda env create -f test_p36.yml
 ```
