@@ -1,5 +1,5 @@
 ---
 title: 'タイトル'
 date: 'yyyy-mm-dd'
-category: 'カテゴリ'
+tags: 'タグ（空白で複数可）'
 ---

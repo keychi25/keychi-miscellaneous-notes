@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#666666',
   },
 }))
-export default function Date({ tags }) {
+export default function Tags({ tags }) {
   const classes = useStyles()
   const result = tags.split(' ')
   return result.map((tag) => (

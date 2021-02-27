@@ -1,7 +1,7 @@
 ---
-title: FastAPIでMongoDBを使用する
+title: 'FastAPIでMongoDBを使用する'
 date: '2020-12-22'
-tags: FastAPI MongoDB Docker pymongo
+tags: 'FastAPI MongoDB Docker pymongo'
 ---
 
 本記事は[東京学芸大学 櫨山研究室 Advent Calendar 2020](https://qiita.com/advent-calendar/2020/hazelab)の 22 日目の記事になります．
@@ -25,7 +25,7 @@ RDS との接続は SQLAlchemy（Mysql）という ORM が document で紹介さ
 
 ## 1.1 ディレクトリ構成
 
-```sh
+```console
 .
 ├── Makefile
 ├── README.md
@@ -380,7 +380,7 @@ MongoDB は NoSQL なので，作成されていないものは勝手に作成�
 pymongo を使用することにより簡単に記述することができます．
 使用するデータベース名は以下でしています．
 
-```python
+```python:fast_api/database.py
 db = client.first_test  #database名がfirst_test
 ```
 
