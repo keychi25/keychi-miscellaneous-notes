@@ -25,7 +25,7 @@ RDS との接続は SQLAlchemy（Mysql）という ORM が document で紹介さ
 
 ## 1.1 ディレクトリ構成
 
-```
+```sh
 .
 ├── Makefile
 ├── README.md
