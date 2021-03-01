@@ -27,28 +27,15 @@ const useStyles = makeStyles((theme) => ({
 
 const tileData = [
   {
-    img: '/images/profile.jpg',
-    title: 'Breakfast',
-    author: '@bkristastucchio',
-  },
-  {
-    img: '/images/profile.jpg',
-    title: 'Breakfast',
-  },
-  {
-    img: '/images/profile.jpg',
-    title: 'Breakfast',
-  },
-  {
-    img: '/images/profile.jpg',
-    title: 'Breakfast',
+    img: '/images/2021-03-1.jpg',
+    title: '2021-03-1',
   },
 ]
 export default function SingleLineGridList() {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <GridList className={classes.gridList} cols={3}>
+      <GridList cellHeight={500} className={classes.gridList} cols={3}>
         {tileData.map((tile) => (
           <GridListTile key={tile.img}>
             <img src={tile.img} alt={tile.title} />
