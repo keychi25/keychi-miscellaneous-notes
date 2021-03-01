@@ -30,7 +30,7 @@ $ # conda create -n test_p36 python=3.6
 
 ```console
 $ conda env export -n [環境変数名] > [保存するファイル名].yml
-$ # conda env export -n test_p36 > test_p36.yml
+$ # conda env export --no-build -n test_p36 > test_p36.yml
 ```
 
 ### import
