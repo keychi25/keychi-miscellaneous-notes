@@ -87,19 +87,6 @@ export default function Home({ allPostsData }) {
           </Grid>
         </Grid>
       </section>
-      <section>
-        <Grid item xs={12} sm={8}>
-          <Container fixed>
-            <h2 className={utilStyles.headingLg}>Coffee</h2>
-          </Container>
-        </Grid>
-
-        <Grid item xs={12} sm={12}>
-          <Container fixed>
-            <SingleLineGridList />
-          </Container>
-        </Grid>
-      </section>
     </Layout>
   )
 }
